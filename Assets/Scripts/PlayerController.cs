@@ -24,9 +24,10 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
     private PlayerControls controls;
 
-    private Vector2 moveInput;
-    private bool isGrounded;
-    private bool isCrouching;
+    private Vector2 moveInput = Vector2.zero;
+    private bool isGrounded = false;
+    private bool isCrouching = false;
+    private bool isAimingUp = false;
     private bool facingRight = true;
 
     private void Awake()
@@ -39,12 +40,10 @@ public class PlayerController : MonoBehaviour
     private void OnEnable()
     {
         controls.Player.Enable();
-        controls.Player.Jump.performed += OnJump;
     }
 
     private void OnDisable()
     {
-        controls.Player.Jump.performed -= OnJump;
         controls.Player.Disable();
     }
 
@@ -52,11 +51,10 @@ public class PlayerController : MonoBehaviour
     {
         moveInput = controls.Player.Move.ReadValue<Vector2>();
 
-        isGrounded = Physics2D.OverlapCircle(
-            groundCheck.position, groundCheckRadius, groundLayer);
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 
-        isCrouching = moveInput.y < -0.5f && isGrounded;
-        bool aimingUp = moveInput.y > 0.5f;
+        isCrouching = moveInput.y < 0.0f && isGrounded;
+        isAimingUp = moveInput.y > 0.0f && isGrounded;
 
         // Agachado bloquea el movimiento horizontal
         float horizontal = isCrouching ? 0f : moveInput.x;
@@ -65,18 +63,7 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat("Speed", Mathf.Abs(horizontal));
         animator.SetBool("IsGrounded", isGrounded);
         animator.SetBool("IsCrouching", isCrouching);
-        animator.SetBool("AimUp", aimingUp);
-
-        if (controls.Player.Fire.WasPressedThisFrame())
-        {
-            animator.SetTrigger("Attack");
-
-            Transform spawn = firePoint;
-            if (aimingUp) spawn = firePointUp;
-            else if (isCrouching) spawn = firePointCrouch;
-
-            Instantiate(bulletPrefab, spawn.position, spawn.rotation);
-        }
+        animator.SetBool("AimUp", isAimingUp);
 
         if (horizontal > 0.01f && !facingRight) Flip();
         else if (horizontal < -0.01f && facingRight) Flip();
@@ -84,14 +71,24 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (controls.Player.Jump.WasPressedThisFrame() && isGrounded)
+        {
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+        }
+
+        if (controls.Player.Fire.WasPressedThisFrame())
+        {
+            animator.SetTrigger("Attack");
+
+            Transform spawn = firePoint;
+            if (isAimingUp) spawn = firePointUp;
+            else if (isCrouching) spawn = firePointCrouch;
+
+            Instantiate(bulletPrefab, spawn.position, spawn.rotation);
+        }
+
         float horizontal = isCrouching ? 0f : moveInput.x;
         rb.linearVelocity = new Vector2(horizontal * moveSpeed, rb.linearVelocity.y);
-    }
-
-    private void OnJump(InputAction.CallbackContext ctx)
-    {
-        if (isGrounded)
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
     }
 
     private void Flip()
