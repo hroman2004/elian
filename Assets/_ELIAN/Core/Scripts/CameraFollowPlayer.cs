@@ -1,15 +1,31 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class CameraFollowPlayer : MonoBehaviour
 {
-    [SerializeField]
-    public GameObject Player;
+    [SerializeField] public GameObject Player;
 
-    void LateUpdate()
+    [Header("Limites horizontales")]
+    [SerializeField] private float minX = 10f;
+    [SerializeField] private float maxX = 30f;
+
+    [Header("Posicion vertical")]
+    [SerializeField] private float fixedY = 3.1875f;
+
+    private void LateUpdate()
     {
-        Vector3 newPos = Player.transform.position;
-        newPos.z = transform.position.z;
+        if (Player == null)
+            return;
 
-        transform.position = newPos;
+        float cameraX = Mathf.Clamp(
+            Player.transform.position.x,
+            minX,
+            maxX
+        );
+
+        transform.position = new Vector3(
+            cameraX,
+            fixedY,
+            transform.position.z
+        );
     }
 }
