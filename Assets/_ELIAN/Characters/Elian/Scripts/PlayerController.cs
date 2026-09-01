@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -25,10 +25,13 @@ public class PlayerController : MonoBehaviour
     private PlayerControls controls;
 
     private Vector2 moveInput = Vector2.zero;
+
     private bool isGrounded = false;
     private bool isCrouching = false;
     private bool isAimingUp = false;
     private bool facingRight = true;
+
+    private bool jumpRequested = false;
 
     private void Awake()
     {
@@ -49,46 +52,79 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        // El input se lee cada frame para que responda inmediatamente.
         moveInput = controls.Player.Move.ReadValue<Vector2>();
 
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+        isGrounded = Physics2D.OverlapCircle(
+            groundCheck.position,
+            groundCheckRadius,
+            groundLayer
+        );
 
-        isCrouching = moveInput.y < 0.0f && isGrounded;
-        isAimingUp = moveInput.y > 0.0f && isGrounded;
+        isCrouching = moveInput.y < 0f && isGrounded;
+        isAimingUp = moveInput.y > 0f && isGrounded;
 
-        // Agachado bloquea el movimiento horizontal
         float horizontal = isCrouching ? 0f : moveInput.x;
 
-        // Los bools se escriben ANTES que el trigger
         animator.SetFloat("Speed", Mathf.Abs(horizontal));
         animator.SetBool("IsGrounded", isGrounded);
         animator.SetBool("IsCrouching", isCrouching);
         animator.SetBool("AimUp", isAimingUp);
 
-        if (horizontal > 0.01f && !facingRight) Flip();
-        else if (horizontal < -0.01f && facingRight) Flip();
+        if (horizontal > 0.01f && !facingRight)
+            Flip();
+        else if (horizontal < -0.01f && facingRight)
+            Flip();
+
+        // Registramos el salto inmediatamente.
+        if (controls.Player.Jump.WasPressedThisFrame() && isGrounded)
+        {
+            jumpRequested = true;
+        }
+
+        // El disparo no necesita esperar al ciclo de fisica.
+        if (controls.Player.Fire.WasPressedThisFrame())
+        {
+            Shoot();
+        }
     }
 
     private void FixedUpdate()
     {
-        if (controls.Player.Jump.WasPressedThisFrame() && isGrounded)
+        if (jumpRequested)
         {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
-        }
+            rb.linearVelocity = new Vector2(
+                rb.linearVelocity.x,
+                jumpForce
+            );
 
-        if (controls.Player.Fire.WasPressedThisFrame())
-        {
-            animator.SetTrigger("Attack");
-
-            Transform spawn = firePoint;
-            if (isAimingUp) spawn = firePointUp;
-            else if (isCrouching) spawn = firePointCrouch;
-
-            Instantiate(bulletPrefab, spawn.position, spawn.rotation);
+            jumpRequested = false;
         }
 
         float horizontal = isCrouching ? 0f : moveInput.x;
-        rb.linearVelocity = new Vector2(horizontal * moveSpeed, rb.linearVelocity.y);
+
+        rb.linearVelocity = new Vector2(
+            horizontal * moveSpeed,
+            rb.linearVelocity.y
+        );
+    }
+
+    private void Shoot()
+    {
+        animator.SetTrigger("Attack");
+
+        Transform spawn = firePoint;
+
+        if (isAimingUp)
+            spawn = firePointUp;
+        else if (isCrouching)
+            spawn = firePointCrouch;
+
+        Instantiate(
+            bulletPrefab,
+            spawn.position,
+            spawn.rotation
+        );
     }
 
     private void Flip()
@@ -99,8 +135,13 @@ public class PlayerController : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
-        if (groundCheck == null) return;
+        if (groundCheck == null)
+            return;
+
         Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
+        Gizmos.DrawWireSphere(
+            groundCheck.position,
+            groundCheckRadius
+        );
     }
 }
