@@ -10,10 +10,12 @@ public class EnemyController : MonoBehaviour
 
     [Header("Movimiento")]
     [SerializeField] private float moveSpeed = 2.5f;
+    [SerializeField] private bool isFlying = false;
 
     [Header("Ataque")]
     [SerializeField] private float attackCooldown = 1.5f;
     [SerializeField, Min(1)] private int attackDamage = 1;
+    [SerializeField] private Vector2 attackCenterOffset = Vector2.zero;
 
     private Rigidbody2D rb;
     private Animator animator;
@@ -27,11 +29,15 @@ public class EnemyController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+
+        if (isFlying)
+            rb.gravityScale = 0f;
     }
 
     private void Start()
     {
         GameObject p = GameObject.FindGameObjectWithTag("Player");
+
         if (p != null)
         {
             player = p.transform;
@@ -41,12 +47,20 @@ public class EnemyController : MonoBehaviour
 
     private void Update()
     {
-        if (player == null) return;
+        if (player == null)
+            return;
 
-        float distance = Vector2.Distance(
-            transform.position, player.position);
+        float detectionDistance = Vector2.Distance(
+            transform.position,
+            player.position
+        );
 
-        if (distance <= attackRange)
+        float attackDistance = Vector2.Distance(
+            GetAttackCenter(),
+            player.position
+        );
+
+        if (attackDistance <= attackRange)
         {
             animator.SetFloat("Speed", 0f);
             LookAtPlayer();
@@ -60,7 +74,7 @@ public class EnemyController : MonoBehaviour
                     playerHealth.TakeDamage(attackDamage);
             }
         }
-        else if (distance <= detectionRange)
+        else if (detectionDistance <= detectionRange)
         {
             animator.SetFloat("Speed", 1f);
             LookAtPlayer();
@@ -73,27 +87,62 @@ public class EnemyController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (player == null) return;
+        if (player == null)
+            return;
 
-        float distance = Vector2.Distance(
-            transform.position, player.position);
+        float detectionDistance = Vector2.Distance(
+            transform.position,
+            player.position
+        );
 
-        if (distance <= detectionRange && distance > attackRange)
+        float attackDistance = Vector2.Distance(
+            GetAttackCenter(),
+            player.position
+        );
+
+        if (detectionDistance <= detectionRange &&
+            attackDistance > attackRange)
         {
-            float dir = Mathf.Sign(
-                player.position.x - transform.position.x);
-            rb.linearVelocity = new Vector2(
-                dir * moveSpeed, rb.linearVelocity.y);
+            if (isFlying)
+            {
+                Vector2 direction =
+                    ((Vector2)player.position - rb.position).normalized;
+
+                rb.linearVelocity =
+                    direction * moveSpeed;
+            }
+            else
+            {
+                float dir = Mathf.Sign(
+                    player.position.x - transform.position.x
+                );
+
+                rb.linearVelocity = new Vector2(
+                    dir * moveSpeed,
+                    rb.linearVelocity.y
+                );
+            }
         }
         else
         {
-            rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
+            if (isFlying)
+            {
+                rb.linearVelocity = Vector2.zero;
+            }
+            else
+            {
+                rb.linearVelocity = new Vector2(
+                    0f,
+                    rb.linearVelocity.y
+                );
+            }
         }
     }
 
     private void LookAtPlayer()
     {
-        bool playerIsRight = player.position.x > transform.position.x;
+        bool playerIsRight =
+            player.position.x > transform.position.x;
 
         if (playerIsRight != facingRight)
         {
@@ -102,11 +151,23 @@ public class EnemyController : MonoBehaviour
         }
     }
 
+    private Vector2 GetAttackCenter()
+    {
+        return transform.TransformPoint(attackCenterOffset);
+    }
+
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, detectionRange);
+        Gizmos.DrawWireSphere(
+            transform.position,
+            detectionRange
+        );
+
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, attackRange);
+        Gizmos.DrawWireSphere(
+            GetAttackCenter(),
+            attackRange
+        );
     }
 }
