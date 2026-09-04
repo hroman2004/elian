@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 42
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,10 +113,10 @@ TextureImporter:
       name: spritee_attack_crouched_v3_0
       rect:
         serializedVersion: 2
-        x: 214
-        y: 27
-        width: 83
-        height: 103
+        x: 0
+        y: 0
+        width: 160
+        height: 160
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -135,10 +135,10 @@ TextureImporter:
       name: spritee_attack_crouched_v3_2
       rect:
         serializedVersion: 2
-        x: 303
-        y: 27
-        width: 77
-        height: 100
+        x: 320
+        y: 0
+        width: 160
+        height: 160
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -157,10 +157,10 @@ TextureImporter:
       name: spritee_attack_crouched_v3_3
       rect:
         serializedVersion: 2
-        x: 392
-        y: 27
-        width: 78
-        height: 86
+        x: 480
+        y: 0
+        width: 160
+        height: 160
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,10 +179,10 @@ TextureImporter:
       name: spritee_attack_crouched_v3_5
       rect:
         serializedVersion: 2
-        x: 480
-        y: 27
-        width: 88
-        height: 92
+        x: 800
+        y: 0
+        width: 160
+        height: 160
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -198,13 +198,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritee_attack_crouched_v3_6
+      name: spritee_attack_crouched_v3_1
       rect:
         serializedVersion: 2
-        x: 570
-        y: 27
-        width: 90
-        height: 91
+        x: 160
+        y: 0
+        width: 160
+        height: 160
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,20 +213,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dffcce6d9402c494c98147c15f7e02f8
-      internalID: -1481756887
+      spriteID: 094b9c17ea8938e4690749d36cc914ce
+      internalID: 1963585638
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritee_attack_crouched_v3_7
+      name: spritee_attack_crouched_v3_4
       rect:
         serializedVersion: 2
-        x: 660
-        y: 27
-        width: 79
-        height: 102
+        x: 640
+        y: 0
+        width: 160
+        height: 160
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -235,8 +235,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 221f18263eedfde479aa1d1fd012d962
-      internalID: -1888396185
+      spriteID: 13cd0be6c4ccafd44b3d93e6bfc9d494
+      internalID: -46512755
       vertices: []
       indices: 
       edges: []
@@ -255,7 +255,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":6.0,"y":1.0},"gridSpriteSize":{"x":160.0,"y":160.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       spritee_attack_crouched_v3_0: -1928568532
       spritee_attack_crouched_v3_1: 1963585638
@@ -263,8 +263,6 @@ TextureImporter:
       spritee_attack_crouched_v3_3: -1903296466
       spritee_attack_crouched_v3_4: -46512755
       spritee_attack_crouched_v3_5: -1165049211
-      spritee_attack_crouched_v3_6: -1481756887
-      spritee_attack_crouched_v3_7: -1888396185
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -62,7 +62,7 @@ public class PlayerController : MonoBehaviour
         );
 
         isCrouching = moveInput.y < 0f && isGrounded;
-        isAimingUp = moveInput.y > 0f && isGrounded;
+        isAimingUp = moveInput.y > 0f;
 
         float horizontal = isCrouching ? 0f : moveInput.x;
 

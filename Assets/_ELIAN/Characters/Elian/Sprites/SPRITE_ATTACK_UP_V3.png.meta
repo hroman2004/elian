@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 20
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,10 +113,10 @@ TextureImporter:
       name: SPRITE_ATTACK_UP_V3_0
       rect:
         serializedVersion: 2
-        x: 368
-        y: 40
-        width: 34
-        height: 64
+        x: 0
+        y: 0
+        width: 160
+        height: 160
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -135,10 +135,10 @@ TextureImporter:
       name: SPRITE_ATTACK_UP_V3_1
       rect:
         serializedVersion: 2
-        x: 407
-        y: 39
-        width: 33
-        height: 65
+        x: 160
+        y: 0
+        width: 160
+        height: 160
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -157,10 +157,10 @@ TextureImporter:
       name: SPRITE_ATTACK_UP_V3_2
       rect:
         serializedVersion: 2
-        x: 445
-        y: 41
-        width: 33
-        height: 70
+        x: 320
+        y: 0
+        width: 160
+        height: 160
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,10 +179,10 @@ TextureImporter:
       name: SPRITE_ATTACK_UP_V3_3
       rect:
         serializedVersion: 2
-        x: 481
-        y: 39
-        width: 32
-        height: 89
+        x: 480
+        y: 0
+        width: 160
+        height: 160
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -201,10 +201,10 @@ TextureImporter:
       name: SPRITE_ATTACK_UP_V3_4
       rect:
         serializedVersion: 2
-        x: 518
-        y: 40
-        width: 32
-        height: 81
+        x: 640
+        y: 0
+        width: 160
+        height: 160
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -223,10 +223,10 @@ TextureImporter:
       name: SPRITE_ATTACK_UP_V3_5
       rect:
         serializedVersion: 2
-        x: 554
-        y: 40
-        width: 33
-        height: 64
+        x: 800
+        y: 0
+        width: 160
+        height: 160
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -255,7 +255,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":6.0,"y":1.0},"gridSpriteSize":{"x":160.0,"y":160.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       SPRITE_ATTACK_UP_V3_0: 750592219
       SPRITE_ATTACK_UP_V3_1: 1454891846

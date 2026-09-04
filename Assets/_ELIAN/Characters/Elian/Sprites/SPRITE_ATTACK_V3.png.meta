@@ -113,10 +113,10 @@ TextureImporter:
       name: SPRITE_ATTACK_V3_0
       rect:
         serializedVersion: 2
-        x: 214
-        y: 27
-        width: 79
-        height: 98
+        x: 0
+        y: 0
+        width: 160
+        height: 160
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -135,10 +135,10 @@ TextureImporter:
       name: SPRITE_ATTACK_V3_1
       rect:
         serializedVersion: 2
-        x: 297
-        y: 27
-        width: 90
-        height: 98
+        x: 160
+        y: 0
+        width: 160
+        height: 160
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -157,10 +157,10 @@ TextureImporter:
       name: SPRITE_ATTACK_V3_2
       rect:
         serializedVersion: 2
-        x: 391
-        y: 27
-        width: 91
-        height: 98
+        x: 320
+        y: 0
+        width: 160
+        height: 160
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,10 +179,10 @@ TextureImporter:
       name: SPRITE_ATTACK_V3_3
       rect:
         serializedVersion: 2
-        x: 482
-        y: 27
-        width: 88
-        height: 98
+        x: 480
+        y: 0
+        width: 160
+        height: 160
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -201,10 +201,10 @@ TextureImporter:
       name: SPRITE_ATTACK_V3_4
       rect:
         serializedVersion: 2
-        x: 571
-        y: 27
-        width: 84
-        height: 98
+        x: 640
+        y: 0
+        width: 160
+        height: 160
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -223,10 +223,10 @@ TextureImporter:
       name: SPRITE_ATTACK_V3_5
       rect:
         serializedVersion: 2
-        x: 661
-        y: 27
-        width: 84
-        height: 98
+        x: 800
+        y: 0
+        width: 160
+        height: 160
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -255,7 +255,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":6.0,"y":1.0},"gridSpriteSize":{"x":160.0,"y":160.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       SPRITE_ATTACK_V3_0: -370269914
       SPRITE_ATTACK_V3_1: -26712285
@@ -263,7 +263,6 @@ TextureImporter:
       SPRITE_ATTACK_V3_3: 170655664
       SPRITE_ATTACK_V3_4: -610892472
       SPRITE_ATTACK_V3_5: 1395845508
-      SPRITE_ATTACK_V3_6: -1361970913
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

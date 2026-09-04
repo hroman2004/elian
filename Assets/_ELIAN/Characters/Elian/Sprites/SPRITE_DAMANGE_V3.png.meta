@@ -113,10 +113,10 @@ TextureImporter:
       name: SPRITE_DAMANGE_V3_0
       rect:
         serializedVersion: 2
-        x: 238
-        y: 27
-        width: 81
-        height: 102
+        x: 0
+        y: 0
+        width: 160
+        height: 160
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -135,10 +135,10 @@ TextureImporter:
       name: SPRITE_DAMANGE_V3_1
       rect:
         serializedVersion: 2
-        x: 316
-        y: 27
-        width: 69
-        height: 102
+        x: 160
+        y: 0
+        width: 160
+        height: 160
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -157,10 +157,10 @@ TextureImporter:
       name: SPRITE_DAMANGE_V3_2
       rect:
         serializedVersion: 2
-        x: 399
-        y: 27
-        width: 80
-        height: 101
+        x: 320
+        y: 0
+        width: 160
+        height: 160
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,10 +179,10 @@ TextureImporter:
       name: SPRITE_DAMANGE_V3_3
       rect:
         serializedVersion: 2
-        x: 483
-        y: 27
-        width: 75
-        height: 95
+        x: 480
+        y: 0
+        width: 160
+        height: 160
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -201,10 +201,10 @@ TextureImporter:
       name: SPRITE_DAMANGE_V3_4
       rect:
         serializedVersion: 2
-        x: 572
-        y: 27
-        width: 83
-        height: 102
+        x: 640
+        y: 0
+        width: 160
+        height: 160
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -223,10 +223,10 @@ TextureImporter:
       name: SPRITE_DAMANGE_V3_5
       rect:
         serializedVersion: 2
-        x: 667
-        y: 27
-        width: 79
-        height: 102
+        x: 800
+        y: 0
+        width: 160
+        height: 160
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -255,7 +255,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":6.0,"y":1.0},"gridSpriteSize":{"x":160.0,"y":160.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       SPRITE_DAMANGE_V3_0: 904613968
       SPRITE_DAMANGE_V3_1: 64212824

@@ -113,10 +113,10 @@ TextureImporter:
       name: sprite_idle_v3_0
       rect:
         serializedVersion: 2
-        x: 101
-        y: 296
-        width: 73
-        height: 103
+        x: 0
+        y: 0
+        width: 160
+        height: 160
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -135,10 +135,10 @@ TextureImporter:
       name: sprite_idle_v3_1
       rect:
         serializedVersion: 2
-        x: 194
-        y: 296
-        width: 86
-        height: 112
+        x: 160
+        y: 0
+        width: 160
+        height: 160
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -157,10 +157,10 @@ TextureImporter:
       name: sprite_idle_v3_4
       rect:
         serializedVersion: 2
-        x: 291
-        y: 296
-        width: 76
-        height: 101
+        x: 640
+        y: 0
+        width: 160
+        height: 160
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,10 +179,10 @@ TextureImporter:
       name: sprite_idle_v3_5
       rect:
         serializedVersion: 2
-        x: 102
-        y: 184
-        width: 79
-        height: 100
+        x: 800
+        y: 0
+        width: 160
+        height: 160
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -201,10 +201,10 @@ TextureImporter:
       name: sprite_idle_v3_6
       rect:
         serializedVersion: 2
-        x: 195
-        y: 184
-        width: 78
-        height: 100
+        x: 960
+        y: 0
+        width: 160
+        height: 160
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -223,10 +223,10 @@ TextureImporter:
       name: sprite_idle_v3_7
       rect:
         serializedVersion: 2
-        x: 286
-        y: 183
-        width: 92
-        height: 103
+        x: 1120
+        y: 0
+        width: 160
+        height: 160
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -245,10 +245,10 @@ TextureImporter:
       name: sprite_idle_v3_8
       rect:
         serializedVersion: 2
-        x: 101
-        y: 73
-        width: 78
-        height: 108
+        x: 1280
+        y: 0
+        width: 160
+        height: 160
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -264,13 +264,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprite_idle_v3_9
+      name: sprite_idle_v3_2
       rect:
         serializedVersion: 2
-        x: 195
-        y: 73
-        width: 93
-        height: 108
+        x: 320
+        y: 0
+        width: 160
+        height: 160
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -279,20 +279,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 514fd43e101b9e34dba4dfef7fc03af1
-      internalID: 1077284222
+      spriteID: 23e29af9b55a62d41bfe552015330f63
+      internalID: -178480463
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprite_idle_v3_10
+      name: sprite_idle_v3_3
       rect:
         serializedVersion: 2
-        x: 287
-        y: 73
-        width: 91
-        height: 109
+        x: 480
+        y: 0
+        width: 160
+        height: 160
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -301,8 +301,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f1222d60e45a61c40b3ea05291db6ff6
-      internalID: 746371436
+      spriteID: 84ce19160ac3e9b4bbe5fe88fc760dd6
+      internalID: -1406789666
       vertices: []
       indices: 
       edges: []
@@ -321,11 +321,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":160.0,"y":160.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":9.0,"y":1.0},"gridSpriteSize":{"x":160.0,"y":160.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       sprite_idle_v3_0: 17534462
       sprite_idle_v3_1: 2125492157
-      sprite_idle_v3_10: 746371436
       sprite_idle_v3_2: -178480463
       sprite_idle_v3_3: -1406789666
       sprite_idle_v3_4: -78305989
@@ -333,7 +332,6 @@ TextureImporter:
       sprite_idle_v3_6: 452687334
       sprite_idle_v3_7: -1973873799
       sprite_idle_v3_8: -1802173305
-      sprite_idle_v3_9: 1077284222
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

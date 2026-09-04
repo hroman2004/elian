@@ -113,10 +113,10 @@ TextureImporter:
       name: SPRITE_DEAD_V3_0
       rect:
         serializedVersion: 2
-        x: 215
-        y: 27
-        width: 79
-        height: 101
+        x: 0
+        y: 0
+        width: 160
+        height: 160
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -135,10 +135,10 @@ TextureImporter:
       name: SPRITE_DEAD_V3_1
       rect:
         serializedVersion: 2
-        x: 302
-        y: 27
-        width: 80
-        height: 94
+        x: 160
+        y: 0
+        width: 160
+        height: 160
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -157,10 +157,10 @@ TextureImporter:
       name: SPRITE_DEAD_V3_2
       rect:
         serializedVersion: 2
-        x: 383
-        y: 28
-        width: 62
-        height: 86
+        x: 320
+        y: 0
+        width: 160
+        height: 160
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,10 +179,10 @@ TextureImporter:
       name: SPRITE_DEAD_V3_3
       rect:
         serializedVersion: 2
-        x: 462
-        y: 30
-        width: 82
-        height: 63
+        x: 480
+        y: 0
+        width: 160
+        height: 160
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -201,10 +201,10 @@ TextureImporter:
       name: SPRITE_DEAD_V3_4
       rect:
         serializedVersion: 2
-        x: 575
-        y: 27
-        width: 81
-        height: 68
+        x: 640
+        y: 0
+        width: 160
+        height: 160
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -220,13 +220,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPRITE_DEAD_V3_6
+      name: SPRITE_DEAD_V3_5
       rect:
         serializedVersion: 2
-        x: 678
-        y: 25
-        width: 60
-        height: 77
+        x: 800
+        y: 0
+        width: 160
+        height: 160
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -235,8 +235,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bda77263fe7d61b448b547c68ef3ab46
-      internalID: -1756540084
+      spriteID: 419593d15fdcbdf4ba996e456c67490f
+      internalID: -1418497869
       vertices: []
       indices: 
       edges: []
@@ -255,7 +255,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":6.0,"y":1.0},"gridSpriteSize":{"x":160.0,"y":160.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       SPRITE_DEAD_V3_0: 2139865213
       SPRITE_DEAD_V3_1: 1880083105
@@ -263,10 +263,6 @@ TextureImporter:
       SPRITE_DEAD_V3_3: 727499264
       SPRITE_DEAD_V3_4: 1220093156
       SPRITE_DEAD_V3_5: -1418497869
-      SPRITE_DEAD_V3_6: -1756540084
-      SPRITE_DEAD_V3_7: 977291669
-      SPRITE_DEAD_V3_8: -979586398
-      SPRITE_DEAD_V3_9: -1664366256
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
