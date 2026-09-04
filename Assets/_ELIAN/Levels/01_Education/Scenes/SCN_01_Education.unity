@@ -375,7 +375,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 136851524}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FirePointUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -406,7 +406,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 371725093}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8771,7 +8771,7 @@ GameObject:
   - component: {fileID: 1825258542}
   - component: {fileID: 1825258540}
   - component: {fileID: 1825258539}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Enemie1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8959,7 +8959,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyController
   detectionRange: 8
-  attackRange: 4
+  attackRange: 1.7
   moveSpeed: 2.5
   attackCooldown: 1.5
   attackDamage: 1
@@ -9011,7 +9011,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1901740515}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FirePointCrouch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9154,7 +9154,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2036951563}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9193,7 +9193,7 @@ GameObject:
   - component: {fileID: 2053764467}
   - component: {fileID: 2053764469}
   - component: {fileID: 2053764468}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
