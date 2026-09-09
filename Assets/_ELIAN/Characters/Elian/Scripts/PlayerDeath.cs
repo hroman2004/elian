@@ -40,12 +40,28 @@ public class PlayerDeath : MonoBehaviour
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
         if (rb != null) rb.linearVelocity = Vector2.zero;
 
-        Invoke(nameof(RestartScene), restartDelay);
+        // Restamos la vida apenas muere (no despues del delay), asi el
+        // HUD se actualiza al instante aunque el reinicio tarde un poco.
+        bool hasLivesLeft = LivesManager.LoseLife();
+
+        if (hasLivesLeft)
+            Invoke(nameof(RestartScene), restartDelay);
+        else
+            Invoke(nameof(HandleGameOver), restartDelay);
     }
 
     private void RestartScene()
     {
         SceneManager.LoadScene(
             SceneManager.GetActiveScene().buildIndex);
+    }
+
+    private void HandleGameOver()
+    {
+        // TODO: reemplazar esto cuando tengas armada la pantalla/escena
+        // de Game Over (por ejemplo SceneManager.LoadScene("GameOver"),
+        // o activar un panel de UI). Por ahora solo lo dejamos loggeado
+        // para no bloquearte con el resto del HUD.
+        Debug.Log("GAME OVER");
     }
 }
