@@ -9,6 +9,9 @@ public class WaveController : MonoBehaviour
     [SerializeField] private GameObject tutorialText;
     [SerializeField] private bool hideTutorialWhenComplete;
 
+    [Header("Desbloqueo")]
+    [SerializeField] private GameObject deactivateOnComplete;
+
     private bool completed;
 
     private void Update()
@@ -26,5 +29,8 @@ public class WaveController : MonoBehaviour
 
         if (hideTutorialWhenComplete && tutorialText != null)
             tutorialText.SetActive(false);
+
+        if (deactivateOnComplete != null)
+            deactivateOnComplete.SetActive(false);
     }
 }
